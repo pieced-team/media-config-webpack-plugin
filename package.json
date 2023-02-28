@@ -1,0 +1,42 @@
+{
+  "name": "@pieced/media-config-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Automatically configuration webpack5 media loader",
+  "author": "mingdev <mingdev@163.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "lint:eslint": "eslint --ext .js src"
+  },
+  "imports": {
+    "#config/*": "./config/*.js",
+    "#config": "./config/index.js",
+    "#src/*": "./src/*.js"
+  },
+  "homepage": "https://github.com/pieced-team/media-config-webpack-plugin",
+  "pre-commit": "lint-staged",
+  "dependencies": {
+    "@pieced/image-config-webpack-plugin": "latest",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "lint-staged": "^13.1.2",
+    "pre-commit": "^1.2.2"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.0.0"
+  },
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "media-config-webpack-plugin"
+  ]
+}
