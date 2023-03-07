@@ -4,15 +4,12 @@
   "description": "Automatically configuration webpack5 media loader",
   "author": "mingdev <mingdev@163.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./dist/MediaConfigWebpackPlugin.js",
   "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build",
     "lint-staged": "lint-staged",
     "lint:eslint": "eslint --ext .js src"
-  },
-  "imports": {
-    "#config/*": "./config/*.js",
-    "#config": "./config/index.js",
-    "#src/*": "./src/*.js"
   },
   "homepage": "https://github.com/pieced-team/media-config-webpack-plugin",
   "pre-commit": "lint-staged",
@@ -21,6 +18,12 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@types/node": "^18.14.6",
+    "@types/webpack": "^5.28.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
@@ -31,12 +34,10 @@
     "webpack": ">=5.0.0"
   },
   "files": [
-    "index.js",
-    "src"
+    "dist"
   ],
   "keywords": [
     "webpack",
-    "webpack-plugin",
-    "media-config-webpack-plugin"
+    "webpack-plugin"
   ]
 }
