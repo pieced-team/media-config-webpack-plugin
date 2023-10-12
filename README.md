@@ -39,7 +39,7 @@ module.exports = {
 **suffix**
 
 - `type array`
-- `default ['webm', 'mp4', 'ogv', 'mp3', 'aac', 'ogg']`
+- `default ['webm', 'mp4', 'ogv', 'mp3', 'aac', 'ogg', 'wav']`
 
 
 **parser**
