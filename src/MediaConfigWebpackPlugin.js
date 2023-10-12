@@ -5,7 +5,7 @@ module.exports = class MediaConfigWebpackPlugin extends ImageConfigWebpackPlugin
   getOptions(compiler) {
     const isDevelopment = compiler.options.mode === 'development';
     const defaultOpt = {
-      suffix: ['webm', 'mp4', 'ogv', 'mp3', 'aac', 'ogg'],
+      suffix: ['webm', 'mp4', 'ogv', 'mp3', 'aac', 'ogg', 'wav'],
       parser: {
         dataUrlCondition: {
           maxSize: isDevelopment ? undefined : 1000,
